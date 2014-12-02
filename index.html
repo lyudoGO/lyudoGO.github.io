@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Problem 1.Create "Books" REST Service</title>
+	<link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+	<section id="wrapper">
+		<header>
+			<h1>Books REST Service</h1>
+		</header>
+		<article id="books">
+			<h2>Books</h2>
+			<ul>
+				<li class="label">
+					<span>Title</span>
+					<span>Author</span>
+					<span>ISBN</span>
+				</li>
+			</ul>
+			<input type="button" id="get-books" value="GET Books">
+			<input type="button" id="create-book" value="Create new book">
+		</article>
+		<article id="new-book">
+			<h2>New Book</h2>
+			<ul>
+				<li class="label">
+					<span>Title</span>
+					<span>Author</span>
+					<span>ISBN</span>
+				</li>
+			</ul>
+			<input type="button" id="add-book" value="POST Books">
+		</article>
+		<footer>
+			<h4>All Rigths Reserved</h4>
+		</footer>
+	</section>
+	<div id="message"></div>
+	<script src="libs/jquery-2.1.1.min.js"></script>
+	<script src="js/ajax-request.js"></script>
+	<script src="js/book-class.js"></script>
+	<script src="js/ui-application.js"></script>
+	<script src="js/books-rest-service.js"></script>
+</body>
+</html>

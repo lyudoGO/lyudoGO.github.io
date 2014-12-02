@@ -1,0 +1,144 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+section#wrapper {
+	margin: 10px auto;
+	padding: 10px;
+	width: 700px;
+	border: 3px solid black;
+	background: rgba(204, 255, 255, 0.15);
+}
+
+article#books {
+	margin: 5px;
+	padding: 10px;
+	border: 1px solid black;
+	text-align: center;
+}
+
+article#new-book {
+	display: none;
+	margin: 5px;
+	padding: 10px;
+	border: 1px solid black;
+	text-align: center;
+}
+
+h1 {
+	text-align: center;
+}
+
+h2 {
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+ul {
+	list-style-type: none;
+	margin-bottom: 10px;
+}
+
+li {
+	margin-bottom: 2px;
+}
+
+input.title {
+	width: 260px;
+}
+
+li.label span {
+	width: 259px;
+	display: inline-block;
+	font-size: 18px;
+	color: orange;
+	background-color: black;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 2px;
+	border: none;
+}
+
+input.author {
+	width: 150px;
+}
+
+li.label span:nth-child(2) {
+	width: 146px;
+}
+
+input.isbn {
+	width: 120px;
+}
+
+li.label span:nth-child(3) {
+	width: 117px;
+}
+
+input[type="text"] {
+	background: rgba(204, 255, 255, 0.15);
+}
+
+input[type="text"]:hover {
+	color: white;
+	background-color: blue;
+}
+
+input[type="button"] {
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-left: 5px;
+}
+
+input[type="button"]:hover {
+	cursor: pointer;
+}
+
+input[value="Edit"], [value="Add/Edit"] {
+	padding-left: 18px;
+	padding-right: 18px;
+	background-color: green;
+	color: white;
+	border-color: green;
+}
+
+input[value="Delete"] {
+	background-color: red;
+	color: white;
+	border-color: red;
+}
+
+input#get-books, #create-book, #add-book {
+	background-color: blue;
+	color: white;
+	border-color: blue;
+	padding: 5px;
+}
+
+footer {
+	margin: 5px;
+	border: 1px solid black;
+	text-align: center;
+}
+
+li.label {
+	color: orange;
+	text-transform: uppercase;
+	text-align: left;
+}
+
+div#message {
+	display: none;
+	position: absolute;
+	left: 30%;
+	top: 5%;
+	width: 600px;
+	padding: 10px;
+	text-align: center;
+	color: white;
+	font-weight: bolder;
+	font-size: 20px;
+	border-radius: 10px;
+	box-shadow: 10px 10px 15px #0F0F0F;
+}
