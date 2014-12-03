@@ -110,6 +110,13 @@
 			$("#create-books>ul li:not(:first)").remove();
 			$("#create-books").hide();
 		});
+		$("#remove-new-book").on("click", function() {
+			if ($("#create-books>ul li").length === 1) {
+				$("#create-books").hide();
+			} else {
+				$("#create-books>ul li:last").remove();
+			};
+		});
 		$("#edit-book").on("click", function() {
 			putBooksToBase();
 			$("#edit-books>ul li:not(:first)").remove();

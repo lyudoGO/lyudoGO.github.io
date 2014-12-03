@@ -179,11 +179,16 @@ input[value="Remove"] {
 	border-color: orange;
 }
 
-input#get-books, #create-book, #edit-book, #add-new-book {
+input#get-books, #create-book, #edit-book, #add-new-book, #remove-new-book {
 	background-color: blue;
 	color: white;
 	border-color: blue;
 	padding: 5px;
+}
+
+input#remove-new-book {
+	background-color: orange;
+	border-color: orange;
 }
 
 input[value="Add"] {
