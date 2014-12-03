@@ -6,7 +6,7 @@
 section#wrapper {
 	margin: 10px auto;
 	padding: 10px;
-	width: 700px;
+	width: 750px;
 	border: 3px solid black;
 	background: rgba(204, 255, 255, 0.15);
 }
@@ -18,20 +18,33 @@ article#books {
 	text-align: center;
 }
 
-article#new-book {
+article#edit-books, article#create-books {
 	display: none;
 	margin: 5px;
-	padding: 10px;
+	padding: 8px;
 	border: 1px solid black;
 	text-align: center;
 }
 
-h1 {
+article#tags {
+	display: none;
+	margin: 5px;
+	padding: 10px;
+	width: 300px;
+	border: 1px solid black;
 	text-align: center;
+	position: absolute;
+	left: 2%;
+	top: 25%;
+	background: rgba(204, 255, 255, 0.85);
+}
+
+h1, h2 {
+	text-align: center;
+	//color: orange;
 }
 
 h2 {
-	text-align: center;
 	margin-bottom: 10px;
 }
 
@@ -42,14 +55,71 @@ ul {
 
 li {
 	margin-bottom: 2px;
+	text-align: left;
 }
 
-input.title {
-	width: 260px;
+#books > ul > li:not(.label) {
+	display: block;
+	width: 642px;
+	border-bottom: 1px solid black;
+}
+
+#books > ul > li:not(.label):hover {
+	background-color: blue;
+	color: white;
+	cursor: pointer;
+}
+
+li.selected {
+	display: block;
+	width: 642px;
+	background-color: green;
+	color: white;
+}
+
+span {
+	display: inline-block;
+	text-align: left;
+	font-weight: bolder;
+}
+
+span.title {
+	width: 310px;
+}
+
+span.author {
+	width: 155px;
+}
+
+span.isbn {
+	width: 120px;
+}
+
+input[type="text"].title {
+	width: 300px;
+}
+
+input[type="text"].author {
+	width: 150px;
+}
+
+input[type="text"].isbn {
+	width: 120px;
+}
+
+input[type="text"].tags {
+	width: 578px;
+	margin: 3px 0 13px 0;
+}
+
+li.label {
+	color: orange;
+	text-transform: uppercase;
+	text-align: left;
 }
 
 li.label span {
-	width: 259px;
+	width: 299px;
 	display: inline-block;
 	font-size: 18px;
 	color: orange;
@@ -60,16 +130,8 @@ li.label span {
 	border: none;
 }
 
-input.author {
-	width: 150px;
-}
-
 li.label span:nth-child(2) {
 	width: 146px;
-}
-
-input.isbn {
-	width: 120px;
 }
 
 li.label span:nth-child(3) {
@@ -95,9 +157,9 @@ input[type="button"]:hover {
 	cursor: pointer;
 }
 
-input[value="Edit"], [value="Add/Edit"] {
-	padding-left: 18px;
-	padding-right: 18px;
+input[value="Edit tags"], [value="Edit"] {
+	/* padding-left: 0px;
+	padding-right: 0px; */
 	background-color: green;
 	color: white;
 	border-color: green;
@@ -109,11 +171,25 @@ input[value="Delete"] {
 	border-color: red;
 }
 
-input#get-books, #create-book, #add-book {
+input[value="Remove"] {
+	padding-left: 5px;
+	padding-right: 5px;
+	background-color: orange;
+	color: white;
+	border-color: orange;
+}
+
+input#get-books, #create-book, #edit-book, #add-new-book {
 	background-color: blue;
 	color: white;
 	border-color: blue;
 	padding: 5px;
+}
+
+input[value="Add"] {
+	background-color: blue;
+	color: white;
+	border-color: blue;
 }
 
 footer {
@@ -122,17 +198,46 @@ footer {
 	text-align: center;
 }
 
-li.label {
-	color: orange;
-	text-transform: uppercase;
-	text-align: left;
+input.add-tag {
+	margin: 5px 45px 5px 45px;
+	
 }
 
-div#message {
+#tags > ul > li {
+	padding-left: 20px;
+}
+
+#tags > ul > li:hover {
+	background-color: blue;
+	color: white;
+	cursor: pointer;
+}
+
+#tags > ul > li.get-tag {
+	background-color: green;
+	color: white;
+}
+
+#tags > h4 {
+	background-color: black;
+	color: orange;
+}
+
+p.book-tags:hover {
+	color: white;
+}
+
+p.no-tags {
+	color: red;
+	font-weight: bolder;
+	font-size: 20px;
+}
+
+div#error, #success {
 	display: none;
 	position: absolute;
 	left: 30%;
-	top: 5%;
+	top: 30%;
 	width: 600px;
 	padding: 10px;
 	text-align: center;
@@ -141,4 +246,11 @@ div#message {
 	font-size: 20px;
 	border-radius: 10px;
 	box-shadow: 10px 10px 15px #0F0F0F;
+	background-color: red;
 }
+
+div#success {
+	top: 40%;
+	background-color: green;
+}
+
